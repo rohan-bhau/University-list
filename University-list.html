@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My University Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #0d47a1, #1976d2);
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1976d2;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .university-list {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .university-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0d47a1;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    .details {
+      display: none;
+      border-left: 3px solid #0d47a1;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My University Planner</h1>
+    <p>Curated list of universities with admission and scholarship details</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="switchTab('preferred')">My Preferred Universities</a>
+    <a href="#" onclick="switchTab('safe')">Safe Choice Universities</a>
+    <a href="#" onclick="switchTab('others')">Other Universities</a>
+  </nav>
+
+  <div class="container">
+    <div id="preferred" class="section active">
+      <div class="university-list">
+        <div class="university-name" onclick="showDetails('cambridge')">University of Cambridge</div>
+        <div class="details" id="cambridge">
+          <p><strong>Website:</strong> <a href="https://www.cam.ac.uk/" target="_blank">https://www.cam.ac.uk/</a></p>
+          <p><strong>Acceptance Rate:</strong> 21%</p>
+          <p><strong>Location:</strong> Cambridge, England</p>
+          <p><strong>Ranking:</strong> World: 5 | UK: 5</p>
+          <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: October 15<br>Result: Mid-January</p>
+          <p><strong>Apply via:</strong> UCAS Portal (UK-wide centralized application system)</p>
+          <p><strong>Admission Requirements:</strong><br>- HSC GPA: 5.0 (preferably Golden A+)<br>- IELTS: 7.5 (no band below 7.0)<br>- SAT: 1500+ (Optional)<br>- Additional: Admission Test + Interview</p>
+          <p><strong>Scholarships Available:</strong><br><strong>1. Gates Cambridge Scholarship</strong><br>Type: Full Ride (Tuition + Living)<br>Eligibility: Academic excellence, leadership<br>How to Apply: Separate application after admission offer via <a href="https://www.gatescambridge.org" target="_blank">Gates Website</a><br><br><strong>2. Cambridge Trust</strong><br>Type: Partial to Full<br>Eligibility: International students with need<br>How to Apply: Auto-considered during UCAS application</p>
+        </div>
+        <div class="details" id="cambridge">
+          <p><strong>Website:</strong> <a href="https://www.cam.ac.uk/" target="_blank">https://www.cam.ac.uk/</a></p>
+          <p><strong>Acceptance Rate:</strong> 21%</p>
+          <p><strong>Location:</strong> Cambridge, England</p>
+          <p><strong>Ranking:</strong> World: 5 | UK: 5</p>
+          <p><strong>Deadline:</strong> 15-Oct</p>
+          <p><strong>Tests:</strong> SAT 1500+ (Optional), IELTS 7.5 (7.0 per band)</p>
+          <p><strong>Scholarship:</strong> After offer letter (Cambridge Trust, Gates Cambridge)</p>
+          <p><strong>Apply via:</strong> UCAS Portal</p>
+        </div>
+
+        <div class="university-name" onclick="showDetails('oxford')">University of Oxford</div>
+        <div class="details" id="oxford">
+          <p><strong>Website:</strong> <a href="https://www.ox.ac.uk/" target="_blank">https://www.ox.ac.uk/</a></p>
+          <p><strong>Acceptance Rate:</strong> 17.5%</p>
+          <p><strong>Location:</strong> Oxford, UK</p>
+          <p><strong>Ranking:</strong> World: 5 | UK: 3</p>
+          <p><strong>Deadline:</strong> 15-Oct</p>
+          <p><strong>Tests:</strong> SAT 1500+ (Optional), IELTS 7.5 (7.0 per band)</p>
+          <p><strong>Scholarship:</strong> Reach Oxford Scholarship</p>
+          <p><strong>Apply via:</strong> UCAS Portal</p>
+        </div>
+
+        <div class="university-name" onclick="showDetails('harvard')">Harvard University</div>
+        <div class="details" id="harvard">
+          <p><strong>Website:</strong> <a href="https://www.harvard.edu/" target="_blank">https://www.harvard.edu/</a></p>
+          <p><strong>Acceptance Rate:</strong> 3.2%</p>
+          <p><strong>Location:</strong> Cambridge, MA, USA</p>
+          <p><strong>Ranking:</strong> World: 4 | USA: 3</p>
+          <p><strong>Deadline:</strong> 1-Nov</p>
+          <p><strong>Tests:</strong> SAT 1500+ (Required), IELTS 7.0+</p>
+          <p><strong>Scholarship:</strong> Full need-based (Harvard Financial Aid Initiative)</p>
+          <p><strong>Apply via:</strong> Common App</p>
+        </div>
+
+        <div class="university-name" onclick="showDetails('toronto')">University of Toronto</div>
+        <div class="details" id="toronto">
+          <p><strong>Website:</strong> <a href="https://www.utoronto.ca/" target="_blank">https://www.utoronto.ca/</a></p>
+          <p><strong>Acceptance Rate:</strong> 29%</p>
+          <p><strong>Location:</strong> Toronto, Canada</p>
+          <p><strong>Ranking:</strong> World: 25 | Canada: 1</p>
+          <p><strong>Deadline:</strong> Mid-January</p>
+          <p><strong>Tests:</strong> IELTS 6.5+</p>
+          <p><strong>Scholarship:</strong> Lester B. Pearson International Scholarship (full ride, competitive)</p>
+          <p><strong>Apply via:</strong> OUAC Portal</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="safe" class="section">
+      <p>Coming soon...</p>
+    </div>
+
+    <div id="others" class="section">
+      <p>Coming soon...</p>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tab) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(tab).classList.add('active');
+    }
+
+    function showDetails(id) {
+      document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
