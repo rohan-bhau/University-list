@@ -6,15 +6,31 @@
   <title>My University Planner</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f8f9fa;
+      --text: #333;
+      --header-bg: linear-gradient(to right, #0d47a1, #1976d2);
+      --nav-bg: #1976d2;
+      --card-bg: white;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #f1f1f1;
+      --header-bg: linear-gradient(to right, #212121, #424242);
+      --nav-bg: #333;
+      --card-bg: #1e1e1e;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: #f8f9fa;
+      background: var(--bg);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: var(--text);
     }
     header {
-      background: linear-gradient(to right, #0d47a1, #1976d2);
+      background: var(--header-bg);
       color: white;
       padding: 40px 20px 20px;
       text-align: center;
@@ -30,12 +46,13 @@
     nav {
       display: flex;
       justify-content: center;
-      background: #1976d2;
+      background: var(--nav-bg);
       padding: 10px 0;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 5px 15px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.2s ease-in-out;
@@ -56,7 +73,7 @@
       animation: fadeIn 0.5s ease-in-out;
     }
     .university-list {
-      background: white;
+      background: var(--card-bg);
       padding: 20px;
       margin-bottom: 30px;
       border-radius: 10px;
@@ -79,9 +96,55 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    .search-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .search-bar input {
+      padding: 10px;
+      width: 90%;
+      max-width: 500px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #fff;
+      z-index: 999;
+    }
+    .theme-toggle span {
+      margin: 0 5px;
+      opacity: 0.5;
+    }
+    .theme-toggle .active {
+      opacity: 1;
+    }
+    .only-scholarships {
+      text-align: center;
+      margin: 20px;
+    }
+    .only-scholarships button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background: #0d47a1;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <span id="sun">☀️</span><span id="moon">🌙</span>
+  </button>
   <header>
     <h1>My University Planner</h1>
     <p>Curated list of universities with admission and scholarship details</p>
@@ -92,6 +155,14 @@
     <a href="#" onclick="switchTab('safe')">Safe Choice Universities</a>
     <a href="#" onclick="switchTab('others')">Other Universities</a>
   </nav>
+
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search university..." onkeyup="searchUniversity()" />
+  </div>
+
+  <div class="only-scholarships">
+    <button onclick="showOnlyScholarships()">View All Scholarships</button>
+  </div>
 
   <div class="container">
     <div id="preferred" class="section active">
@@ -310,8 +381,7 @@
 </div>
 </div>
 
-
-    <div id="safe" class="section">
+<div id="safe" class="section">
       <p>Coming soon...</p>
     </div>
 
@@ -319,16 +389,115 @@
       <p>Coming soon...</p>
     </div>
   </div>
-
+  <footer>
+    <p style="text-align: center; margin-top: 20px;">My University Planner</p>
+    <p style="text-align: center; margin-top: 20px;">&copy; Developed by Bhau</p>
+</footer>
   <script>
+    
+    let activeDetail = null;
+
     function switchTab(tab) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
       document.getElementById(tab).classList.add('active');
     }
+    
 
     function showDetails(id) {
-      document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
+      const target = document.getElementById(id);
+      if (activeDetail && activeDetail !== target) {
+        activeDetail.style.display = 'none';
+      }
+      if (target.style.display === 'block') {
+        target.style.display = 'none';
+        activeDetail = null;
+      } else {
+        target.style.display = 'block';
+        activeDetail = target;
+      }
+    }
+
+    function searchUniversity() {
+      const input = document.getElementById("search").value.toLowerCase();
+      document.querySelectorAll(".university-name").forEach(name => {
+        const match = name.textContent.toLowerCase().includes(input);
+        name.style.display = match ? "block" : "none";
+        const detail = document.getElementById(name.getAttribute("onclick").match(/'(.*?)'/)[1]);
+        if (!match) detail.style.display = "none";
+      });
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.dataset.theme;
+      const sun = document.getElementById("sun");
+      const moon = document.getElementById("moon");
+      if (currentTheme === "dark") {
+        document.documentElement.dataset.theme = "light";
+        sun.classList.add("active");
+        moon.classList.remove("active");
+      } else {
+        document.documentElement.dataset.theme = "dark";
+        moon.classList.add("active");
+        sun.classList.remove("active");
+      }
+    }
+
+    function showOnlyScholarships() {
+      const container = document.getElementById("mainContainer");
+      container.innerHTML = "";
+
+      const scholarshipData = JSON.parse(localStorage.getItem("allScholarships") || "[]");
+
+      scholarshipData.forEach(uni => {
+        const div = document.createElement("div");
+        div.className = "university-list";
+        div.innerHTML = `
+          <div class="university-name">${uni.name}</div>
+          <div class="details" style="display: block">
+            <p><strong>Scholarship:</strong> ${uni.scholarship}</p>
+            <p><strong>Requirement:</strong> ${uni.requirement}</p>
+            <p><strong>Eligibility:</strong> ${uni.eligibility}</p>
+            <p><strong>How to Apply:</strong> ${uni.apply}</p>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    window.onload = function() {
+      const sun = document.getElementById("sun");
+      const moon = document.getElementById("moon");
+      if (document.documentElement.dataset.theme === "dark") {
+        moon.classList.add("active");
+        sun.classList.remove("active");
+      } else {
+        sun.classList.add("active");
+        moon.classList.remove("active");
+      }
+      document.getElementById("mainContainer").innerHTML = `<div class="section active"><p>Loading ${tab}...</p></div>`;
+        
+
+      
+      const exampleScholarships = [
+        {
+          name: "ABC University",
+          scholarship: "Merit-based Scholarship",
+          requirement: "Minimum GPA 4.5 in HSC",
+          eligibility: "SSC + HSC with Science background",
+          apply: "Visit university website > Scholarship section"
+        },
+        {
+          name: "XYZ International University",
+          scholarship: "Need-based Financial Aid",
+          requirement: "Family income below 20,000 BDT/month",
+          eligibility: "Any group, SSC & HSC GPA 4.0+",
+          apply: "Email scholarship@xyzuniv.edu with documents"
+        }
+      ];
+
+      localStorage.setItem("allScholarships", JSON.stringify(exampleScholarships));
     }
   </script>
 </body>
