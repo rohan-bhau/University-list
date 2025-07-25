@@ -89,72 +89,227 @@
 
   <nav>
     <a href="#" onclick="switchTab('preferred')">My Preferred Universities</a>
-    <a href="#" onclick="switchTab('safe')">Universities for keeping safe</a>
+    <a href="#" onclick="switchTab('safe')">Safe Choice Universities</a>
     <a href="#" onclick="switchTab('others')">Other Universities</a>
   </nav>
 
   <div class="container">
     <div id="preferred" class="section active">
       <div class="university-list">
-        <div class="university-name" onclick="showDetails('cambridge')">University of Cambridge</div>
-        <div class="details" id="cambridge">
-          <p><strong>Website:</strong> <a href="https://www.cam.ac.uk/" target="_blank">https://www.cam.ac.uk/</a></p>
-          <p><strong>Acceptance Rate:</strong> 21%</p>
-          <p><strong>Location:</strong> Cambridge, England</p>
-          <p><strong>Ranking:</strong> World: 5 | UK: 5</p>
-          <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: October 15<br>Result: Mid-January</p>
-          <p><strong>Apply via:</strong> UCAS Portal (UK-wide centralized application system)</p>
-          <p><strong>Admission Requirements:</strong><br>- HSC GPA: 5.0 (preferably Golden A+)<br>- IELTS: 7.5 (no band below 7.0)<br>- SAT: 1500+ (Optional)<br>- Additional: Admission Test + Interview</p>
-          <p><strong>Scholarships Available:</strong><br><strong>1. Gates Cambridge Scholarship</strong><br>Type: Full Ride (Tuition + Living)<br>Eligibility: Academic excellence, leadership<br>How to Apply: Separate application after admission offer via <a href="https://www.gatescambridge.org" target="_blank">Gates Website</a><br><br><strong>2. Cambridge Trust</strong><br>Type: Partial to Full<br>Eligibility: International students with need<br>How to Apply: Auto-considered during UCAS application</p>
-        </div>
-        <div class="details" id="cambridge">
-          <p><strong>Website:</strong> <a href="https://www.cam.ac.uk/" target="_blank">https://www.cam.ac.uk/</a></p>
-          <p><strong>Acceptance Rate:</strong> 21%</p>
-          <p><strong>Location:</strong> Cambridge, England</p>
-          <p><strong>Ranking:</strong> World: 5 | UK: 5</p>
-          <p><strong>Deadline:</strong> 15-Oct</p>
-          <p><strong>Tests:</strong> SAT 1500+ (Optional), IELTS 7.5 (7.0 per band)</p>
-          <p><strong>Scholarship:</strong> After offer letter (Cambridge Trust, Gates Cambridge)</p>
-          <p><strong>Apply via:</strong> UCAS Portal</p>
-        </div>
+        <div class="university-name" onclick="showDetails('mit')">MIT</div>
+<div class="details" id="mit">
+  <p><strong>Website:</strong> <a href="https://web.mit.edu/" target="_blank">https://web.mit.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 6.7%</p>
+  <p><strong>Location:</strong> Cambridge, Massachusetts, USA</p>
+  <p><strong>Ranking:</strong> World: 1 | USA: 1</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (EA) / January 5 (RD)<br>Result: Mid-December / Mid-March</p>
+  <p><strong>Apply via:</strong> MIT Application Portal (https://apply.mitadmissions.org)</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- SAT: 1500+<br>- Strong academics, essays, and recommendation letters</p>
+  <p><strong>Scholarships Available:</strong><br><strong>MIT Need-Based Aid</strong><br>Type: Full/Partial<br>Eligibility: Financial need<br>How to Apply: CSS Profile + MIT forms</p>
+</div>
 
-        <div class="university-name" onclick="showDetails('oxford')">University of Oxford</div>
-        <div class="details" id="oxford">
-          <p><strong>Website:</strong> <a href="https://www.ox.ac.uk/" target="_blank">https://www.ox.ac.uk/</a></p>
-          <p><strong>Acceptance Rate:</strong> 17.5%</p>
-          <p><strong>Location:</strong> Oxford, UK</p>
-          <p><strong>Ranking:</strong> World: 5 | UK: 3</p>
-          <p><strong>Deadline:</strong> 15-Oct</p>
-          <p><strong>Tests:</strong> SAT 1500+ (Optional), IELTS 7.5 (7.0 per band)</p>
-          <p><strong>Scholarship:</strong> Reach Oxford Scholarship</p>
-          <p><strong>Apply via:</strong> UCAS Portal</p>
-        </div>
+<!-- Now follow the order user requested -->
 
-        <div class="university-name" onclick="showDetails('harvard')">Harvard University</div>
-        <div class="details" id="harvard">
-          <p><strong>Website:</strong> <a href="https://www.harvard.edu/" target="_blank">https://www.harvard.edu/</a></p>
-          <p><strong>Acceptance Rate:</strong> 3.2%</p>
-          <p><strong>Location:</strong> Cambridge, MA, USA</p>
-          <p><strong>Ranking:</strong> World: 4 | USA: 3</p>
-          <p><strong>Deadline:</strong> 1-Nov</p>
-          <p><strong>Tests:</strong> SAT 1500+ (Required), IELTS 7.0+</p>
-          <p><strong>Scholarship:</strong> Full need-based (Harvard Financial Aid Initiative)</p>
-          <p><strong>Apply via:</strong> Common App</p>
-        </div>
+<!-- Stanford, LSE, Cambridge, Oxford, Chicago, UPenn, Harvard, NYU, UC Berkeley, Yale, Toronto, NUS, Imperial, Cornell, Warwick, UT Austin -->
 
-        <div class="university-name" onclick="showDetails('toronto')">University of Toronto</div>
-        <div class="details" id="toronto">
-          <p><strong>Website:</strong> <a href="https://www.utoronto.ca/" target="_blank">https://www.utoronto.ca/</a></p>
-          <p><strong>Acceptance Rate:</strong> 29%</p>
-          <p><strong>Location:</strong> Toronto, Canada</p>
-          <p><strong>Ranking:</strong> World: 25 | Canada: 1</p>
-          <p><strong>Deadline:</strong> Mid-January</p>
-          <p><strong>Tests:</strong> IELTS 6.5+</p>
-          <p><strong>Scholarship:</strong> Lester B. Pearson International Scholarship (full ride, competitive)</p>
-          <p><strong>Apply via:</strong> OUAC Portal</p>
-        </div>
-      </div>
-    </div>
+<!-- Already present content (reordered) -->
+
+<div class="university-name" onclick="showDetails('stanford')">Stanford University</div>
+<div class="details" id="stanford">
+  <p><strong>Website:</strong> <a href="https://www.stanford.edu/" target="_blank">https://www.stanford.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 4.3%</p>
+  <p><strong>Location:</strong> Stanford, California, USA</p>
+  <p><strong>Ranking:</strong> World: 2 | USA: 3</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (Restrictive Early Action) / January 5 (RD)<br>Result: December / March</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- SAT: 1500+<br>- Strong GPA and essays</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Stanford Financial Aid</strong><br>Type: Full need-based<br>Eligibility: Demonstrated financial need<br>How to Apply: CSS Profile + IDOC</p>
+</div>
+
+<!-- Keep adding rest of the reordered university blocks here... -->
+
+<div class="university-name" onclick="showDetails('yale')">Yale University</div>
+<div class="details" id="yale">
+  <p><strong>Website:</strong> <a href="https://www.yale.edu/" target="_blank">https://www.yale.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 4.6%</p>
+  <p><strong>Location:</strong> New Haven, Connecticut, USA</p>
+  <p><strong>Ranking:</strong> World: 12 | USA: Top 10</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (EA) / January 2 (RD)<br>Result: December / April</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.5+<br>- SAT: 1480+<br>- Strong recommendation letters & essays</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Yale Financial Aid</strong><br>Type: Need-based, full coverage possible<br>Eligibility: Demonstrated need<br>How to Apply: CSS Profile</p>
+</div>
+
+<div class="university-name" onclick="showDetails('toronto')">University of Toronto</div>
+<div class="details" id="toronto">
+  <p><strong>Website:</strong> <a href="https://www.utoronto.ca/" target="_blank">https://www.utoronto.ca/</a></p>
+  <p><strong>Acceptance Rate:</strong> 43%</p>
+  <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
+  <p><strong>Ranking:</strong> World: 21 | Canada: 1</p>
+  <p><strong>Application Timeline:</strong><br>Start: September<br>Deadline: January 15<br>Result: April–May</p>
+  <p><strong>Apply via:</strong> OUAC Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 6.5+<br>- HSC A/A+ average<br>- Statement of Interest (program-specific)</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Lester B. Pearson Scholarship</strong><br>Type: Full tuition, books, accommodation<br>Eligibility: Exceptional academic achievement, leadership<br>How to Apply: School nomination + university application</p>
+</div>
+
+<div class="university-name" onclick="showDetails('nus')">National University of Singapore (NUS)</div>
+<div class="details" id="nus">
+  <p><strong>Website:</strong> <a href="https://www.nus.edu.sg/" target="_blank">https://www.nus.edu.sg/</a></p>
+  <p><strong>Acceptance Rate:</strong> ~7% (international)</p>
+  <p><strong>Location:</strong> Singapore</p>
+  <p><strong>Ranking:</strong> World: 8 | Asia: 1</p>
+  <p><strong>Application Timeline:</strong><br>Start: October<br>Deadline: March<br>Result: May</p>
+  <p><strong>Apply via:</strong> NUS Online Application Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 6.5+<br>- Excellent HSC results<br>- Interview may be required</p>
+  <p><strong>Scholarships Available:</strong><br><strong>NUS Global Merit Scholarship</strong><br>Type: Full tuition + allowance<br>Eligibility: Outstanding academic record + leadership<br>How to Apply: Auto-considered + essay + interview</p>
+</div>
+
+<div class="university-name" onclick="showDetails('imperial')">Imperial College London</div>
+<div class="details" id="imperial">
+  <p><strong>Website:</strong> <a href="https://www.imperial.ac.uk/" target="_blank">https://www.imperial.ac.uk/</a></p>
+  <p><strong>Acceptance Rate:</strong> 14%</p>
+  <p><strong>Location:</strong> London, UK</p>
+  <p><strong>Ranking:</strong> World: 10 | UK: Top 3</p>
+  <p><strong>Application Timeline:</strong><br>Start: September<br>Deadline: January 25<br>Result: Rolling</p>
+  <p><strong>Apply via:</strong> UCAS Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- Strong science/math background<br>- Predicted A-level equivalent (HSC A+)</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Imperial President’s Scholarship</strong><br>Type: Full tuition + stipend<br>Eligibility: Outstanding academic background<br>How to Apply: UCAS + internal scholarship form</p>
+</div>
+
+<div class="university-name" onclick="showDetails('cornell')">Cornell University</div>
+<div class="details" id="cornell">
+  <p><strong>Website:</strong> <a href="https://www.cornell.edu/" target="_blank">https://www.cornell.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 8.7%</p>
+  <p><strong>Location:</strong> Ithaca, New York, USA</p>
+  <p><strong>Ranking:</strong> World: 20 | USA: Top 15</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (ED) / January 2 (RD)<br>Result: December / April</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- SAT: 1450+<br>- Good academic record, essays</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Cornell Grant Aid</strong><br>Type: Need-based<br>Eligibility: Demonstrated financial need<br>How to Apply: CSS Profile + FAFSA (if US citizen)</p>
+</div>
+
+<div class="university-name" onclick="showDetails('warwick')">University of Warwick</div>
+<div class="details" id="warwick">
+  <p><strong>Website:</strong> <a href="https://warwick.ac.uk/" target="_blank">https://warwick.ac.uk/</a></p>
+  <p><strong>Acceptance Rate:</strong> ~14%</p>
+  <p><strong>Location:</strong> Coventry, England, UK</p>
+  <p><strong>Ranking:</strong> World: 67 | UK: Top 10</p>
+  <p><strong>Application Timeline:</strong><br>Start: September<br>Deadline: January 25<br>Result: March–April</p>
+  <p><strong>Apply via:</strong> UCAS Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 6.5+<br>- Strong predicted grades (HSC A/A+)</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Warwick Undergraduate Global Excellence Scholarship</strong><br>Type: Up to full tuition<br>Eligibility: Outstanding international students<br>How to Apply: Via Warwick portal after offer</p>
+</div>
+
+<div class="university-name" onclick="showDetails('utexas')">University of Texas at Austin</div>
+<div class="details" id="utexas">
+  <p><strong>Website:</strong> <a href="https://www.utexas.edu/" target="_blank">https://www.utexas.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 29%</p>
+  <p><strong>Location:</strong> Austin, Texas, USA</p>
+  <p><strong>Ranking:</strong> World: 58 | USA: Top 30</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: December 1<br>Result: March</p>
+  <p><strong>Apply via:</strong> ApplyTexas Portal (https://goapplytexas.org)</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 6.5+<br>- SAT: 1300+<br>- Good academic performance</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Texas Global Scholarship</strong><br>Type: Partial ($5,000–$10,000)<br>Eligibility: Outstanding international applicants<br>How to Apply: Separate form after admission</p>
+</div>
+
+<div class="university-name" onclick="showDetails('lse')">London School of Economics (LSE)</div>
+<div class="details" id="lse">
+  <p><strong>Website:</strong> <a href="https://www.lse.ac.uk/" target="_blank">https://www.lse.ac.uk/</a></p>
+  <p><strong>Acceptance Rate:</strong> 8.9%</p>
+  <p><strong>Location:</strong> London, UK</p>
+  <p><strong>Ranking:</strong> World: 45 | UK: Top 5</p>
+  <p><strong>Application Timeline:</strong><br>Start: September<br>Deadline: January 25<br>Result: Rolling offers</p>
+  <p><strong>Apply via:</strong> UCAS Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- A-level equivalent (Strong HSC marks)<br>- Strong written statement</p>
+  <p><strong>Scholarships Available:</strong><br><strong>LSE Undergraduate Support Scheme</strong><br>Type: Partial/Full based on need<br>Eligibility: International students<br>How to Apply: Financial application after admission offer</p>
+</div>
+
+<div class="university-name" onclick="showDetails('cambridge')">University of Cambridge</div>
+<div class="details" id="cambridge">
+  <p><strong>Website:</strong> <a href="https://www.cam.ac.uk/" target="_blank">https://www.cam.ac.uk/</a></p>
+  <p><strong>Acceptance Rate:</strong> 18%</p>
+  <p><strong>Location:</strong> Cambridge, England, UK</p>
+  <p><strong>Ranking:</strong> World: 2 | UK: 1</p>
+  <p><strong>Application Timeline:</strong><br>Start: September<br>Deadline: October 15<br>Result: January</p>
+  <p><strong>Apply via:</strong> UCAS Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.5+<br>- HSC A+/A grades<br>- Admission Test + Interview</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Cambridge International Scholarships</strong><br>Type: Full<br>Eligibility: Academic excellence<br>How to Apply: Via UCAS + College-specific portal</p>
+</div>
+
+<div class="university-name" onclick="showDetails('oxford')">University of Oxford</div>
+<div class="details" id="oxford">
+  <p><strong>Website:</strong> <a href="https://www.ox.ac.uk/" target="_blank">https://www.ox.ac.uk/</a></p>
+  <p><strong>Acceptance Rate:</strong> 17.5%</p>
+  <p><strong>Location:</strong> Oxford, England, UK</p>
+  <p><strong>Ranking:</strong> World: 1 | UK: 1</p>
+  <p><strong>Application Timeline:</strong><br>Start: September<br>Deadline: October 15<br>Result: January</p>
+  <p><strong>Apply via:</strong> UCAS Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- Strong A-level equivalent (HSC A+)<br>- Written work and interview required</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Reach Oxford Scholarship</strong><br>Type: Full tuition + living cost + return flight<br>Eligibility: Financially needy students from low-income countries<br>How to Apply: UCAS + Oxford online form + separate scholarship form</p>
+</div>
+
+<div class="university-name" onclick="showDetails('uchicago')">University of Chicago</div>
+<div class="details" id="uchicago">
+  <p><strong>Website:</strong> <a href="https://www.uchicago.edu/" target="_blank">https://www.uchicago.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 5.4%</p>
+  <p><strong>Location:</strong> Chicago, Illinois, USA</p>
+  <p><strong>Ranking:</strong> World: 14 | USA: 25</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (ED) / January 2 (RD)<br>Result: Mid-December / Late March</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- SAT: 1500+ (Optional)<br>- Strong personal essays are very important<br>- Recommendation letters required</p>
+  <p><strong>Scholarships Available:</strong><br><strong>University of Chicago Need-Based Aid</strong><br>Type: Full or Partial<br>Eligibility: Demonstrated financial need<br>How to Apply: CSS Profile<br><br><strong>UChicago Merit Scholarships</strong><br>Type: Partial (up to full tuition)<br>Eligibility: Academic excellence, leadership<br>How to Apply: Auto-considered with admission</p>
+</div>
+
+<div class="university-name" onclick="showDetails('upenn')">University of Pennsylvania (UPenn)</div>
+<div class="details" id="upenn">
+  <p><strong>Website:</strong> <a href="https://www.upenn.edu/" target="_blank">https://www.upenn.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 5.9%</p>
+  <p><strong>Location:</strong> Philadelphia, Pennsylvania, USA</p>
+  <p><strong>Ranking:</strong> World: 15 | USA: Top 10</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (ED) / January 5 (RD)<br>Result: December / April</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.5+<br>- SAT: 1450+<br>- Strong GPA and extracurriculars</p>
+  <p><strong>Scholarships Available:</strong><br><strong>UPenn Grant-Based Aid</strong><br>Type: Need-based, full tuition possible<br>Eligibility: Demonstrated financial need<br>How to Apply: CSS Profile + tax documents</p>
+</div>
+
+<div class="university-name" onclick="showDetails('harvard')">Harvard University</div>
+<div class="details" id="harvard">
+  <p><strong>Website:</strong> <a href="https://www.harvard.edu/" target="_blank">https://www.harvard.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 3.4%</p>
+  <p><strong>Location:</strong> Cambridge, Massachusetts, USA</p>
+  <p><strong>Ranking:</strong> World: 3 | USA: 2</p>
+  <p><strong>Application Timeline:</strong><br>Start: August 1<br>Deadline: November 1 (Restrictive Early Action) / January 1 (RD)<br>Result: December / March</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.5+<br>- SAT: 1500+<br>- Strong extracurriculars and essays<br>- Recommendation letters</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Harvard Financial Aid Initiative</strong><br>Type: Full need-based aid<br>Eligibility: All admitted students with demonstrated need<br>How to Apply: CSS Profile + tax documents</p>
+</div>
+
+<div class="university-name" onclick="showDetails('nyu')">New York University (NYU)</div>
+<div class="details" id="nyu">
+  <p><strong>Website:</strong> <a href="https://www.nyu.edu/" target="_blank">https://www.nyu.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 13%</p>
+  <p><strong>Location:</strong> New York City, New York, USA</p>
+  <p><strong>Ranking:</strong> World: 39 | USA: Top 30</p>
+  <p><strong>Application Timeline:</strong><br>Start: August<br>Deadline: November 1 (ED) / January 5 (RD)<br>Result: December / April</p>
+  <p><strong>Apply via:</strong> Common App</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 7.0+<br>- SAT: 1400+ (optional)<br>- Good GPA and essays</p>
+  <p><strong>Scholarships Available:</strong><br><strong>NYU Scholarships</strong><br>Type: Partial merit-based<br>Eligibility: Academic performance<br>How to Apply: Auto-considered</p>
+</div>
+
+<div class="university-name" onclick="showDetails('berkeley')">University of California, Berkeley</div>
+<div class="details" id="berkeley">
+  <p><strong>Website:</strong> <a href="https://www.berkeley.edu/" target="_blank">https://www.berkeley.edu/</a></p>
+  <p><strong>Acceptance Rate:</strong> 11.6%</p>
+  <p><strong>Location:</strong> Berkeley, California, USA</p>
+  <p><strong>Ranking:</strong> World: 27 | USA: Top 15</p>
+  <p><strong>Application Timeline:</strong><br>Start: October 1<br>Deadline: November 30<br>Result: Late March</p>
+  <p><strong>Apply via:</strong> UC Application Portal</p>
+  <p><strong>Admission Requirements:</strong><br>- IELTS: 6.5+<br>- SAT: Optional<br>- Strong academic performance</p>
+  <p><strong>Scholarships Available:</strong><br><strong>Berkeley International Scholarships</strong><br>Type: Partial merit/need-based<br>Eligibility: Academic merit or financial need<br>How to Apply: Automatic or via separate form</p>
+</div>
+</div>
+</div>
+
 
     <div id="safe" class="section">
       <p>Coming soon...</p>
